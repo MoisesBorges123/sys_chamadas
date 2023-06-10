@@ -15,6 +15,6 @@ class Sprofessor extends Model
     ];
     public function turmas()
     {
-        return $this->belongsToMany(Sturma::class, 'tbSPROFESSORTURMA', 'idTURMA', 'idPROFESSOR');
+        return $this->belongsToMany(Sturma::class, 'tbSPROFESSORTURMA', 'idPROFESSOR', 'idTURMA');
     }
 }

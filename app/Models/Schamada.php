@@ -10,6 +10,7 @@ class Schamada extends Model
 {
     use HasFactory;
     protected $table = 'tbSCHAMADA';
+    
     public $fillable = [
         'id',
         'idALUNO',
@@ -21,7 +22,7 @@ class Schamada extends Model
         'PRESENTEAUSENTE'
     ];
 
-    public function aluno(){
+   /* public function aluno(){
         return $this->belongsTo(Saluno::class,'idAluno','id');
     }
     public function turma(){
@@ -32,5 +33,6 @@ class Schamada extends Model
     }
     public function professor(){
         return $this->belongsTo(Scurso::class,'idPROFESSOR','id');
-    }
+    }*/
+    public $timestamps = false;
 }

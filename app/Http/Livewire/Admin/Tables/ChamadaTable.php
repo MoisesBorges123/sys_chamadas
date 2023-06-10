@@ -19,7 +19,8 @@ class ChamadaTable extends DataTableComponent
     public function builder(): Builder
     {      
         return Schamada::query()        
-            ->whereIn('idProfessor',Session::get('professor'));
+            ->where('idProfessor',Session::get('professor'))
+            ->where('idTurma',Session::get('professor'));            
         
     }
     public function columns(): array

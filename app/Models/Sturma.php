@@ -17,4 +17,8 @@ class Sturma extends Model
     {
         return $this->belongsToMany(Sprofessor::class, 'tbSPROFESSORTURMA', 'idPROFESSOR', 'idTURMA');
     }
+    public function alunos()
+    {
+        return $this->belongsToMany(Saluno::class, 'tbSMATRICULA', 'idTURMA', 'idALUNO')->withPivot('idCURSO');
+    }
 }

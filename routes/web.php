@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\{
     Admin\Dashboard,
-    Admin\Professor\Professor
+    Admin\Professor\Professor,
+    Admin\Professor\Turmas
 };
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,12 @@ use App\Http\Livewire\{
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login',[LoginController::class,'login'])->name('login');
+Route::post('/logon',[LoginController::class,'logon'])->name('logon');
+Route::get('/logon',[LoginController::class,'logout'])->name('logout');
 Route::prefix('/painel')->name('admin.')->group(function(){
     Route::get('/dashboard',Dashboard::class)->name('dashboard');
     Route::get('/professores',Professor::class)->name('professores');
+    Route::get('/chamadas',Turmas::class)->name('chamadas');
 });
-Route::get('/', function () {
-    return view('welcome');
-});
+

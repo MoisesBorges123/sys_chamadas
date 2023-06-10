@@ -12,5 +12,5 @@ class Saluno extends Model
     public $fillable = [
         'id',
         'NOME'
-    ];
+    ];    
 }

@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'sqlsrv'),
 
     /*
     |--------------------------------------------------------------------------
@@ -90,9 +90,9 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
-
     ],
-
+    
+    
     /*
     |--------------------------------------------------------------------------
     | Migration Repository Table

@@ -51,9 +51,9 @@
 													<div class="dropdown-divider"></div>
 												</div>
 										
-												<a class="dropdown-item d-flex" href="#">
+												<a class="dropdown-item d-flex" href="{{route('logout')}}">
 													
-													<div class="">Sign Out</div>
+														<div class="">Sair</div>											
 													
 												</a>
 											</div>
